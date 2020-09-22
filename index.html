@@ -1,0 +1,342 @@
+<html>
+    <head></head>
+    <body id="dd">
+       </body>
+    <script>
+       var body=document.getElementById("dd");
+        var center=document.createElement("center")
+        body.appendChild(center)
+        var div1=document.createElement("div");
+        div1.setAttribute("style","width: 500px;height:600px;background-color:black ");
+        center.appendChild(div1)
+        var br=document.createElement("br")
+           div1.appendChild(br)
+        var p=document.createElement("p");
+        p.setAttribute("style","font-size: 25px;font-weight: normal;color: purple;");
+        p.innerHTML="GUESS THE NUMBER";
+        div1.appendChild(p);
+        var button1 =document.createElement("button");
+        button1.setAttribute("style","width: 100px;height: 30px;background-color: silver");
+        
+        button1.innerHTML="PLAY";
+        
+        button1.addEventListener("click",function cli(){
+           
+                start()
+               
+        })
+        function start(){
+            var input=document.createElement("input")
+        input.setAttribute("id","inp1")
+        input.setAttribute("type","number")
+    
+
+
+
+        var n=1;
+    while(n!=0){
+    var b=Math.floor(1000 + Math.random() * 9000);
+    var c=[],f=0;
+    c.push(b.toString());
+   
+    var t=c[0].split("")
+    
+    for(var i=0;i<t.length;i++)
+    {
+        for(var j=i+1;j<t.length;j++)
+        {
+            if(t[i]==t[j])
+            {
+                f=1;
+                break;
+                
+            }
+        }
+    }
+    if(f==0)
+    {
+        
+        //div.innerHTML=b
+        console.log(b)
+        break;
+    }
+    else
+    {
+        n=b;
+        continue;
+    }
+    }
+
+
+
+
+
+        var p1=document.createElement("p");
+        p1.setAttribute("style","font-size: 15px;font-weight: normal;color: purple;margin-left:-300px");
+        p1.innerHTML="ENTER THE NUMBER";
+        div1.appendChild(p1);
+        div1.appendChild(input)
+        var uservalue = document.getElementById("inp1").value;
+   
+    console.log(uservalue);
+    
+    var button =document.createElement("button");
+        button.setAttribute("style","width: 100px;height: 30px;background-color: silver;margin-left:10px");
+        
+        button.innerHTML="Submit";
+        var n=0
+        button.addEventListener("click",function cli(){
+           
+                inp()
+                n++
+          
+//             var p3=document.createElement("p")
+//  p3.setAttribute("style","font-size: 35px;font-weight: normal;color: silver;");
+// p3.innerHTML="YOU LOSE";
+// div1.appendChild(p3);
+// break;
+//            }}
+        })
+        div1.appendChild(button)
+        var br=document.createElement("br")
+           div1.appendChild(br)
+
+        function inp(){
+
+            if(n<4)
+            {
+
+var y=0
+ var p=[]
+ var uservalue = document.getElementById("inp1").value;
+
+ p.push(uservalue);
+// console.log(p.join(""))
+ //console.log(b)
+
+var br=document.createElement("br")
+div1.appendChild(br)
+
+ if(p.join("")==b)
+ {
+     //alert("correct guess")
+ var p2=document.createElement("p")
+ p2.setAttribute("style","font-size: 35px;font-weight: normal;color: silver;");
+p2.innerHTML="YOU WIN";
+div1.appendChild(p2);
+
+}
+else{
+var crtno=[]
+var userno=p
+console.log(p)
+//console.log(crtno)
+crtno.push(b.toString())
+var arr1=crtno[0].split("")
+var arr2=userno[0].split("")
+console.log(arr1)
+console.log(arr2)
+
+function cir1(a){
+
+// var divp=document.createElement("div");
+if(y==0){
+ var divs=document.createElement("div");
+divs.setAttribute("style","border-radius: 50%; width: 30px;height: 30px;background-color: lightgreen;margin-left:-150px ;");
+var n1 = document.createTextNode(a);
+     divs.appendChild(n1)
+div1.appendChild(divs)
+}
+else if(y==1){
+ var divs=document.createElement("div");
+divs.setAttribute("style","border-radius: 50%; width: 30px;height: 30px;background-color: lightgreen;margin-left:-70px ;margin-top:-30px");
+var n1 = document.createTextNode(a);
+     divs.appendChild(n1)
+div1.appendChild(divs)
+}
+else if(y==2){
+ var divs=document.createElement("div");
+divs.setAttribute("style","border-radius: 50%; width: 30px;height: 30px;background-color: lightgreen;margin-left:10px ;margin-top:-30px");
+var n1 = document.createTextNode(a);
+     divs.appendChild(n1)
+div1.appendChild(divs)
+}
+else if(y==3){
+ var divs=document.createElement("div");
+divs.setAttribute("style","border-radius: 50%; width: 30px;height: 30px;background-color: lightgreen;margin-left:90px ;margin-top:-30px");
+var n1 = document.createTextNode(a);
+     divs.appendChild(n1)
+div1.appendChild(divs)
+}
+
+
+}
+
+function cir2(b){
+if(y==0){
+ var divs=document.createElement("div");
+divs.setAttribute("style","border-radius: 50%; width: 30px;height: 30px;background-color: orange;margin-left:-150px ;");
+var n1 = document.createTextNode(b);
+     divs.appendChild(n1)
+div1.appendChild(divs)
+}
+else if(y==1){
+ var divs=document.createElement("div");
+divs.setAttribute("style","border-radius: 50%; width: 30px;height: 30px;background-color: orange;margin-left:-70px ;margin-top:-30px");
+var n1 = document.createTextNode(b);
+     divs.appendChild(n1)
+div1.appendChild(divs)
+}
+else if(y==2){
+ var divs=document.createElement("div");
+divs.setAttribute("style","border-radius: 50%; width: 30px;height: 30px;background-color: orange;margin-left:10px ;margin-top:-30px");
+var n1 = document.createTextNode(b);
+     divs.appendChild(n1)
+div1.appendChild(divs)
+}
+else if(y==3){
+ var divs=document.createElement("div");
+divs.setAttribute("style","border-radius: 50%; width: 30px;height: 30px;background-color: orange;margin-left:90px ;margin-top:-30px");
+var n1 = document.createTextNode(b);
+     divs.appendChild(n1)
+div1.appendChild(divs)
+}
+}
+function cir3(c){
+if(y==0){
+ var divs=document.createElement("div");
+divs.setAttribute("style","border-radius: 50%; width: 30px;height: 30px;background-color: red;margin-left:-150px ;");
+var n1 = document.createTextNode(c);
+     divs.appendChild(n1)
+div1.appendChild(divs)
+}
+else if(y==1){
+ var divs=document.createElement("div");
+divs.setAttribute("style","border-radius: 50%; width: 30px;height: 30px;background-color: red;margin-left:-70px ;margin-top:-30px");
+var n1 = document.createTextNode(c);
+     divs.appendChild(n1)
+div1.appendChild(divs)
+}
+else if(y==2){
+ var divs=document.createElement("div");
+divs.setAttribute("style","border-radius: 50%; width: 30px;height: 30px;background-color: red;margin-left:10px ;margin-top:-30px");
+var n1 = document.createTextNode(c);
+     divs.appendChild(n1)
+div1.appendChild(divs)
+}
+else if(y==3){
+ var divs=document.createElement("div");
+divs.setAttribute("style","border-radius: 50%; width: 30px;height: 30px;background-color: red;margin-left:90px ;margin-top:-30px");
+var n1 = document.createTextNode(c);
+     divs.appendChild(n1)
+div1.appendChild(divs)
+}
+}
+if(arr1[0]==arr2[0])
+{
+cir1(arr2[0])
+y++
+}
+else if(arr2[0]==(arr1[0])||arr2[0]==(arr1[1])||arr2[0]==(arr1[2])||arr2[0]==(arr1[3]))
+{
+cir2(arr2[0])
+y++
+}
+else{
+cir3(arr2[0])
+y++
+}
+
+
+if(arr1[1]==arr2[1])
+{
+cir1(arr2[1]) 
+y++
+}
+else if(arr2[1]==(arr1[0])||arr2[1]==(arr1[1])||arr2[1]==(arr1[2])||arr2[1]==(arr1[3]))
+{
+cir2(arr2[1])
+y++
+}
+else{
+cir3(arr2[1])
+y++
+}
+
+
+if(arr1[2]==arr2[2])
+{
+cir1(arr2[2])
+y++
+}
+else if(arr2[2]==(arr1[0])||arr2[2]==(arr1[1])||arr2[2]==(arr1[2])||arr2[2]==(arr1[3]))
+{
+cir2(arr2[2])
+y++
+}
+else{
+cir3(arr2[2])
+y++
+}
+
+if(arr1[3]==arr2[3])
+{
+cir1(arr2[3])
+}
+else if(arr2[3]==(arr1[0])||arr2[3]==(arr1[1])||arr2[3]==(arr1[2])||arr2[3]==(arr1[3]))
+{
+cir2(arr2[3])
+}
+else{
+cir3(arr2[3])
+}
+// for(var i=0;i<arr1.length;i++)
+// {
+//     var c=0,o=0
+//     for(var j=0;j<arr2.length;j++)
+//     {
+//         if(arr1[i]==arr2[j]&&i==j)
+//         {
+//           cir1(arr2[j])
+//             c=1
+//          break
+//         }
+//         else if(arr2[j]==(arr1[i]))
+//         {
+//             cir2(arr2[j])
+//             o=1
+//             break
+//         }
+//          else {
+//             cir3(arr2[j])
+//            break
+//         }
+ 
+//     }
+//      //if(c==1) break
+//     // if(o==1) break
+// }
+
+
+}
+
+
+
+}
+        else
+{
+    var p3=document.createElement("p")
+  p3.setAttribute("style","font-size: 35px;font-weight: normal;color: silver;");
+ p3.innerHTML="YOU LOSE";
+ div1.appendChild(p3);
+}
+     
+        }}
+
+        
+        div1.appendChild(button1)
+       
+       var br=document.createElement("br")
+          div1.appendChild(br)
+        </script>
+        </html>
